@@ -21,6 +21,11 @@ public class Project {
 
     }
 
+    public Project(String name, int placeholderImage, String description) {
+        this(name,placeholderImage);
+        this.description = description;
+    }
+
     public int getPlaceHolderImage() {
         return placeHolderImage;
     }

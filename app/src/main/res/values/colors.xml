@@ -15,4 +15,6 @@
 
     <color name="opaqueWhite">#90ffffff</color>
     <color name="secondaryLight">#90ffffff</color>
+    <color name="ripple">#97ceeb</color>
+
 </resources>

@@ -33,11 +33,11 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
     }
 
     @Override
-    public void onBindViewHolder(final ProjectsCardViewHolder holder, int position) {
-        final Project listItem = mListItems.get(position);
+    public void onBindViewHolder(ProjectsCardViewHolder holder, int position) {
+        Project listItem = mListItems.get(position);
         holder.projectNameTextView.setText(listItem.getName());
         holder.projectImageView.setImageResource(listItem.getPlaceHolderImage());
-
+        holder.projectDescriptionTextView.setText(listItem.getDescription());
     }
 
     @Override
@@ -47,15 +47,14 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
 
     public class ProjectsCardViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView projectNameTextView;
+        public TextView projectNameTextView, projectDescriptionTextView;
         public ImageView projectImageView;
-
 
         public ProjectsCardViewHolder(View itemView) {
             super(itemView);
             projectImageView = (ImageView) itemView.findViewById(R.id.projectImage);
             projectNameTextView = (TextView) itemView.findViewById(R.id.projectName);
-
+            projectDescriptionTextView = (TextView) itemView.findViewById(R.id.projectDescription);
         }
     }
 
